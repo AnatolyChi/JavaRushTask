@@ -5,6 +5,7 @@ import com.javarush.task.task36.task3608.bean.User;
 import java.util.LinkedList;
 import java.util.List;
 
+// Эмуляция базы данных
 public class DataSource {
     private static DataSource ourInstance = new DataSource();
 

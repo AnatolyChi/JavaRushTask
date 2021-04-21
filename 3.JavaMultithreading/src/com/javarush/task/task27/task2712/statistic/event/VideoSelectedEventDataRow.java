@@ -18,10 +18,6 @@ public class VideoSelectedEventDataRow implements EventDataRow {
         currentDate = new Date();
     }
 
-    public long getAmount() {
-        return amount;
-    }
-
     @Override
     public EventType getType() {
         return EventType.SELECTED_VIDEOS;

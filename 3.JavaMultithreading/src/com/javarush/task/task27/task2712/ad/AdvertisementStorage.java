@@ -21,10 +21,6 @@ public class AdvertisementStorage {
 
     private final List<Advertisement> videos = new ArrayList<>();
 
-    public List<Advertisement> getVideos() {
-        return videos;
-    }
-
     public List<Advertisement> list() {
         return videos;
     }
