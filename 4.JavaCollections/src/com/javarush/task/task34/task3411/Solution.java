@@ -11,6 +11,6 @@ public class Solution {
     }
 
     public static void moveRing(char a, char b, char c, int numRings) {
-        //напишите тут ваш код
+
     }
 }

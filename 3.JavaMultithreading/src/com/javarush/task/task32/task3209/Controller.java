@@ -75,6 +75,7 @@ public class Controller {
     }
 
     public void openDocument() {
+        view.selectHtmlTab();
         JFileChooser fileChooser = new JFileChooser();
         fileChooser.setFileFilter(new HTMLFileFilter());
         if (fileChooser.showOpenDialog(view) == JFileChooser.OPEN_DIALOG) {
@@ -96,12 +97,12 @@ public class Controller {
         view.selectHtmlTab();
         if (currentFile == null) {
             saveDocumentAs();
-        }
-
-        try (FileWriter fileWriter = new FileWriter(currentFile)) {
-            new HTMLEditorKit().write(fileWriter, document, 0, document.getLength());
-        } catch (IOException | BadLocationException e) {
-            ExceptionHandler.log(e);
+        } else {
+            try (FileWriter fileWriter = new FileWriter(currentFile)) {
+                new HTMLEditorKit().write(fileWriter, document, 0, document.getLength());
+            } catch (IOException | BadLocationException e) {
+                ExceptionHandler.log(e);
+            }
         }
     }
 
