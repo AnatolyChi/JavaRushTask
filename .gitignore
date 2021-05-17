@@ -12,6 +12,8 @@ target/
 *.info
 *.properties
 *.jar
+.DS_Store
+.DS_Store?
 
 /out/
 /JavaRushPlugin.properties
